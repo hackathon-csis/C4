@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <title>Med Bay</title>
+<style>
+  .btn{
+    border-radius: 6px!important;  
+  }
+</style>
+</head>
+<body class="agora-theme">
+  <div class="navbar-fixed">
+    <nav class="agora-navbar">
+      <div class="nav-wrapper agora-primary-bg valign-wrapper">
+        <h5 class="left-align">Med Bay</h5>
+        
+      </div>
+    </nav>
+  </div>
+  <div class="row col-8 offset-2">
+    <div class="row container main-container col-sm-10" style="border-radius: 15px;">
+      <form id="loginForm">
+      <div class="col" style="min-width: 433px; max-width: 443px; min-height: 45.5vh;">
+        <div class="card" style="margin-top: 0px; margin-bottom: 0px;border-radius: 10px">
+          <div class="row card-content" style="margin-bottom: 0px;">
+              <div class="input-field" style="display: none">
+                <label for="appId" class="active">App ID</label>
+                <input type="text" value="efb655036b88447db9dec5387ef848d5" name="appId">
+              </div>
+              <div class="input-field">
+                <label for="accountName" class="active">Account Name</label>
+                <input type="text" placeholder="account name" name="accountName">
+              </div>
+              <div class="input-field" style="display:none">
+                <label for="channelName" class="active">Channel Name</label>
+                <input type="text"  value="100" name="channelName">
+              </div>
+              <div class="row" style="text-align: end">
+                <div class="col s12">
+                  <button class="btn btn-raised btn-primary waves-effect waves-light" id="login">LOGIN</button>
+                  <button class="btn btn-raised btn-primary waves-effect waves-light" id="logout">LOGOUT</button>
+                </div>
+              </div>
+              <div class="row" style="margin-bottom: 5vh;">
+                <div class="col s12">
+                    <button class="btn btn-raised btn-primary waves-effect waves-light" id="join" style="display: none">JOIN</button>
+                    <button class="btn btn-raised btn-primary waves-effect waves-light" id="leave" style="display: none">LEAVE</button>
+                </div>
+              </div>
+              <div class="input-field channel-padding" style="display: none">
+                  <label for="channelMessage" class="active">Channel Message</label>
+                  <input type="text" placeholder="channel message" name="channelMessage">
+                <button class="btn btn-raised btn-primary waves-effect waves-light custom-btn-pin" id="send_channel_message">SEND</button>
+              </div>
+              <div class="input-field">
+                <label for="peerId" class="active">Peer Name</label>
+                <input type="text" placeholder="peer name" name="peerId">
+              </div>
+              <div class="input-field channel-padding">
+                <label for="peerMessage" class="active">Peer Message</label>
+                <input type="text" placeholder="Peer Message" name="peerMessage">
+                <button class="btn btn-raised btn-primary waves-effect waves-light custom-btn-pin" id="send_peer_message">SEND</button>
+              </div>
+              <div class="input-field channel-padding" style="display: none">
+                <label for="memberId" class="active">query member</label>
+                <input type="text" placeholder="query member online status" name="memberId">
+                <button class="btn btn-raised btn-primary waves-effect waves-light custom-btn-pin" id="query_peer">QUERY</button>
+              </div>
+              <div class="input-field" style="display: none">
+                <label for="token" class="active">Token</label>
+                <input type="text" placeholder="token" name="token">
+              </div>
+              
+          </div>
+        </div>
+      </div>
+      </form>
+      <div class="col s7 card card-container" id="log" style="border-radius: 10px;min-height: 45.5vh;">
+
+      </div>
+      <div class="card card-container" id="null" style="border-radius: 10px;min-height: 45.5vh;">
+      </div>
+    </div>
+  </div>
+
+</html>

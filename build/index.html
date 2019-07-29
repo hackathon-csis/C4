@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Med Bay</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  <link href="index.6fab157734914fa6fd78.css" rel="stylesheet"></head>
+  <body class="agora-theme">
+    <div class="navbar-fixed">
+      <nav class="agora-navbar">
+        <div class="nav-wrapper agora-primary-bg valign-wrapper">
+          <h5 class="left-align">Med Bay</h5>
+        </div>
+      </nav>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3">
+          <form id="loginForm">
+              <div class="input-field" style="display: none">
+              <label for="appId" class="active">App ID</label>
+              <input type="text" value="efb655036b88447db9dec5387ef848d5" name="appId">
+            </div>
+            <div class="card p-3">
+              <div class="py-2">
+                <label for="accountName" class="active">Account Name</label>
+                <input
+                  type="text"
+                  placeholder="account name"
+                  name="accountName"
+                />
+              </div>
+              <div class="input-field" style="display:none">
+                  <label for="channelName" class="active">Channel Name</label>
+                  <input type="text"  value="100" name="channelName">
+                </div>
+            <div class="row" style="text-align: end">
+              <button
+                class="btn btn-raised btn-primary waves-effect waves-light mx-1"
+                id="login"
+              >
+                LOGIN
+              </button>
+              <button
+                class="btn btn-raised btn-primary waves-effect waves-light mx-1"
+                id="logout"
+              >
+                LOGOUT
+              </button>
+            </div>
+          </form>
+          <div class="input-field">
+            <label for="peerId" class="active">Peer Name</label>
+            <input type="text" placeholder="peer name" name="peerId" />
+          </div>
+          <div class="input-field channel-padding">
+            <label for="peerMessage" class="active">Peer Message</label>
+            <input type="text" placeholder="Peer Message" name="peerMessage" />
+            <button
+              class="btn btn-raised btn-primary waves-effect waves-light custom-btn-pin"
+              id="send_peer_message"
+            >
+              SEND
+            </button>
+          </div>
+        </div>
+        </div>
+        <div class="col-sm-6 card card-container p-3" id="log" style="border-radius: 10px;min-height: 45.5vh;">
+
+        </div>
+        <div class="card col-sm-3 card-container p-3 mx-3" style="border-radius: 6px;">
+          <h5 class="p-0" style="font-family:Verdana, Geneva, Tahoma, sans-serif;font-weight: bold;text-transform: uppercase;font-size: 21px;text-align: center;opacity: 0.7;">Med-Bay Insights</h5>
+          <div class="row py-4">
+            <input type="text" id="linkurl" placeholder="Enter Link">
+            <input type="button" id="linkbtn" class="btn btn-primary" value="GO">
+          </div>
+        </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#linkbtn").click(function(e) {
+  //alert("hi");
+  e.preventDefault();
+  var data = $("#linkurl").val();
+  console.log(data);
+  $.ajax({
+    type: "GET",
+    url: "http://172.26.41.62/agora/?url="+data,
+    data: data,
+    success: function (data){
+      console.log(data);
+    }
+  });
+});
+
+    </script>
+  <script type="text/javascript" src="index.6fab157734914fa6fd78.js"></script></body>
+</html>

@@ -1,2 +1,7 @@
-# C4
-Team C4 CSIS'19 Hackathon
+## Project was done by ShahalKP and Mohammed Yousuf P U
+
+
+
+## License
+
+The MIT License (MIT)
